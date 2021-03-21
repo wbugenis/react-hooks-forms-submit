@@ -12,6 +12,16 @@ function Form() {
     setLastName(event.target.value);
   }
 
+  const handleSubmit = () => {
+    event.preventDefault()
+    const formData = {
+      firstName, lastName
+    }
+    console.log(formData)
+    setFirstName("")
+    setLastName("")
+
+  }
   return (
     <form>
       <input type="text" onChange={handleFirstNameChange} value={firstName} />
